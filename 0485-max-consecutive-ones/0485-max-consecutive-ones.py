@@ -6,17 +6,17 @@ class Solution(object):
         """
         max_count = 0
         current_count = 0
+        
         for num in nums:
-            if num == 1:
+            if num: # Faster than 'if num == 1'
                 current_count += 1
             else:
-            # We hit a 0, so update the max and reset
                 if current_count > max_count:
                     max_count = current_count
                 current_count = 0
-            
-    # Final check for streaks that end at the last index
-        return max(max_count, current_count)
+        
+        # Final comparison for streaks ending at the last element
+        return max_count if max_count > current_count else current_count
             
 
 
