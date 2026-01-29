@@ -6,10 +6,9 @@ class Solution(object):
         """
         ele_rep=set()
         for i in nums:
-            if i not in ele_rep:
-                ele_rep.add(i)
-            else:
+            if i in ele_rep:
                 return True
+            ele_rep.add(i)
         return False
         
 
