@@ -4,13 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        ele_rep=set()
+        """ele_rep=set()
         for i in nums:
             if i not in ele_rep:
                 ele_rep.add(i)
             else:
                 return True
         return False
-        
+        """
+        return len(nums)!=len(set(nums))
 
         
