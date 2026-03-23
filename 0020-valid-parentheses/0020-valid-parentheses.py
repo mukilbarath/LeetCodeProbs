@@ -23,4 +23,3 @@ class Solution(object):
 
         # If the stack is empty, we have a valid string
         return not stack
-        
